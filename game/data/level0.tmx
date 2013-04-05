@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="21" height="23" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="background_color" value="#000000"/>
+ </properties>
+ <tileset firstgid="1" name="metatiles32x32" tilewidth="32" tileheight="32">
+  <image source="metatiles32x32.png" width="160" height="32"/>
+  <tile id="0">
+   <properties>
+    <property name="type" value="solid"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="6" name="brick" tilewidth="32" tileheight="32">
+  <image source="brick.png" width="32" height="32"/>
+ </tileset>
+ <layer name="Background" width="21" height="23">
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAAAAAAAAGAAAABgAAAAYAAAAAAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAAAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAGAAAABgAAAAAAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAAAAAAAAGAAAABgAAAAYAAAAAAAAABgAAAAAAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAGAAAAAAAAAAYAAAAGAAAABgAAAAAAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAAAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAAAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAGAAAABgAAAAYAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAGAAAABgAAAAAAAAAGAAAABgAAAAAAAAAGAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAYAAAAGAAAABgAAAAYAAAAAAAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAGAAAAAAAAAAYAAAAGAAAABgAAAAYAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAYAAAAGAAAABgAAAAYAAAAAAAAABgAAAAAAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAGAAAAAAAAAAYAAAAGAAAABgAAAAYAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAYAAAAGAAAABgAAAAYAAAAAAAAABgAAAAAAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAGAAAAAAAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAAAAAAAAGAAAABgAAAAYAAAAAAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAAAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAGAAAABgAAAAAAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAGAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAAAAAABgAAAAAAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAGAAAAAAAAAAYAAAAAAAAABgAAAAYAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAAAAAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAAAAAAAAYAAAAAAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAAAAAAGAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAA
+  </data>
+ </layer>
+ <layer name="collision" width="21" height="23" opacity="0.24">
+  <properties>
+   <property name="type" value="solid"/>
+  </properties>
+  <data encoding="base64">
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAABAAAAAAAAAAEAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAABAAAAAAAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAABAAAAAAAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAAAAAAEAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAA
+  </data>
+ </layer>
+ <objectgroup name="dots" width="21" height="23">
+  <object name="DotEntity" x="614" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="400">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="167" y="527">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="421" y="207">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="209">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="69" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="198" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="112">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="112">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="112">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="175">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="70" y="143">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="143">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="134" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="198" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="175">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="176">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="70" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="207">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="134" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="240">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="240">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="272">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="272">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="271">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="272">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="304">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="336">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="304">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="336">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="198" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="399">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="464">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="464">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="198" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="134" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="70" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="495">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="528">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="527">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="70" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="198" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="592">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="592">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="592">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="623">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="134" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="70" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="656">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="38" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="70" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="166" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="198" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="230" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="261" y="687">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="293" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="326" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="656">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="656">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="687">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="495">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="528">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="262" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="294" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="325" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="357" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="112">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="454" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="454" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="175">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="388" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="357" y="240">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="358" y="272">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="272">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="271">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="304">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="336">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="400">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="431">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="464">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="390" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="592">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="421" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="422" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="454" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="550" y="687">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="582" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="688">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="656">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="582" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="550" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="518" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="624">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="454" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="592">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="550" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="582" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="560">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="528">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="582" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="550" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="518" y="496">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="485" y="495">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="454" y="495">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="528">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="464">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="485" y="432">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="485" y="400">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="454" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="518" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="550" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="582" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="336">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="304">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="272">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="240">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="518" y="207">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="550" y="208">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="581" y="207">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="518" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="550" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="582" y="144">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="485" y="176">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="176">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="486" y="112">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="549" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="582" y="80">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="614" y="111">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="134" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="102" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="70" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="37" y="368">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="magicdots" width="21" height="23">
+  <object name="MagicDotEntity" x="511" y="63" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="MagicDotEntity" x="127" y="64" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="MagicDotEntity" x="162" y="353" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="MagicDotEntity" x="482" y="352" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="MagicDotEntity" x="513" y="671" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="MagicDotEntity" x="129" y="671" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="MagicDotEntity" x="320" y="543" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="MagicDotEntity" x="319" y="128" width="32" height="30">
+   <properties>
+    <property name="image" value="magicdot"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Entities" width="21" height="23">
+  <object name="mainPlayer" x="321" y="257" width="32" height="30">
+   <properties>
+    <property name="image" value="pacman"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ghost" x="321" y="352" width="32" height="30">
+   <properties>
+    <property name="image" value="ghost"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ghost" x="353" y="352" width="32" height="30">
+   <properties>
+    <property name="image" value="ghost"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="ghost" x="289" y="353" width="32" height="30">
+   <properties>
+    <property name="image" value="ghost"/>
+    <property name="spriteheight" value="32"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="DotEntity" x="551" y="587">
+   <properties>
+    <property name="image" value="dot"/>
+    <property name="spritewidth" value="16"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
