@@ -12,3 +12,7 @@ Screenshots
 ===========
 ![image](http://jvalduvieco.github.com/HackmanSinglePlayer/images/hackman.png)
 
+Demo
+====
+[Click me!](http://jvalduvieco.github.io/HackmanSinglePlayer/game/)
+
